@@ -11,6 +11,9 @@ border-radius:25px;
 	<%= product.title %>
 	<%= product.description %>
 	<%= product.user_id %>
+    <%= link_to 'Show', product %>
+    <%= link_to 'Edit', edit_product_path(product) %>
+    <%= link_to 'Destroy', product, confirm: 'Are you sure?', method: :delete %>
 	<%= l product.created_at %>
 </div>
 	<% end %>

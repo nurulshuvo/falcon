@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Rails falcon: development" product="" version="" jdbc-version="" driver-version="" uuid="8ae76d88-187d-42da-8cde-4abd991f7887">
+    <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+    <jdbc-url>jdbc:sqlite:/home/shuvo/Rails/falcon/db/development.sqlite3</jdbc-url>
+    <libraries>
+      <library>
+        <url>file://</url>
+      </library>
+    </libraries>
+  </data-source>
+</component>
