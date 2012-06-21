@@ -1,6 +1,7 @@
 class ProductTagsController < ApplicationController
   # GET /product_tags
   # GET /product_tags.json
+  before_filter :authenticate_admin!, :except=>[:index,:show]
   def index
     @product_tags = ProductTag.all
 

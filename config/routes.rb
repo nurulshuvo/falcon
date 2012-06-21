@@ -1,4 +1,14 @@
 Falcon::Application.routes.draw do
+  get "contact_us/contact"
+
+  get "about_us/about"
+
+  devise_for :admins
+  devise_for :admins do
+    get '/admins/sign_out' => 'devise/sessions#destroy'
+  end
+
+
   resources :product_tags
 
   resources :tags
@@ -9,6 +19,7 @@ Falcon::Application.routes.draw do
 
  namespace "admin" do
    resources :products
+   root :to => 'products#index'
  end
   # The priority is based upon order of creation:
   # first created -> highest priority.

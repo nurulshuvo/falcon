@@ -1,0 +1,173 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<title>FalconBD</title>
+<%= stylesheet_link_tag "style","folks", :media => "all" %>
+
+
+<!--[if IE 7]>
+<link rel="stylesheet" type="text/css" href="style/css/ie7.css" media="all" />
+<![endif]-->
+
+<%= javascript_include_tag('jquery-1.5.min','jquery.cycle.all.min','ddsmoothmenu','scripts')%>
+
+<script type="text/javascript">
+$(function() {
+      if ($('#sliderholder-cycle').length) {
+      // timeouts per slide (in seconds) 
+      var timeouts = [150,390,25]; 
+      function calculateTimeout(currElement, nextElement, opts, isForward) { 
+          var index = opts.currSlide; 
+          return timeouts[index] * 1000;
+      }
+      jQuery('#sliderholder-cycle').cycle({
+        fx: 'fade',
+        pager: '.slidernav',
+        prev:    '.sliderprev',
+            next:    '.slidernext',
+        speed: 1000,
+        timeoutFn: calculateTimeout,
+        pagerEvent: 'click',
+          pauseOnPagerHover: true,
+          cleartype: 1
+});
+      jQuery('#sliderholder-cycle').css("display", "block");
+      jQuery('.slidernav').css("display", "block");
+      
+      }
+}); 
+</script>
+</head>
+<body>
+<div id="container"> 
+  <!-- Begin Header Wrapper -->
+  <div id="page-top">
+    <div id="header-wrapper"> 
+      <!-- Begin Header -->
+      <div id="header">
+        <div id="logo"><a href="index.html"><%=image_tag('logo.png', :alt=>"Falcon")   %></a></div>
+        <!-- Logo --> 
+        <!-- Begin Menu -->
+        <div id="menu-wrapper">
+          <div id="smoothmenu1" class="ddsmoothmenu">
+            <ul>
+              <li><a href="index.html" class="selected">Home</a>
+              
+              </li>
+              <li><a href="#">Our Products</a>
+                <ul>
+                  <li><a href="#">Papper Products</a></li>
+                  <li><a href="#">Label Products</a></li>
+                  <li><a href="#">Button</a></li>
+                  <li><a href="#">Others</a></li>
+                </ul>
+              </li>
+              
+              
+              <li><a href="page-tabs-toggle.html">Features</a>
+                <ul>
+                  <li><a href="#">Tabs &amp; Toggle</a></li>
+                  <li><a href="#">Carousel</a></li>
+                  <li><a href="#">News</a></li>
+                  <li><a href="#">Services</a></li>
+                  <li><a href="#">Custom Page</a></li>
+                  <li><a href="#">Buttons</a></li>
+                  <li><a href="#">Columns &amp; Tables</a></li>
+                </ul>
+              </li>
+              <li><a href="#">About Us</a>
+                            </li>
+
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- End Menu --> 
+      </div>
+      <!-- End Header --> 
+    </div>
+  </div>
+  <!-- End Header Wrapper --> 
+  
+  <div id="wrapper"><!--Beggin Common Wrapper -->
+
+
+  <!-- Begin Slider -->
+  <div id="cycle-wrapper">
+    <div id="sliderholder-cycle"><%=image_tag('slider-1.jpg', :width=>"960",:height=>"380")   %> 
+      <%=image_tag('slider-2.jpg', :width=>"960",:height=>"380")   %> 
+      <%=image_tag('slider-3.jpg', :width=>"960",:height=>"380")   %>
+      <%=image_tag('slider-4.jpg', :width=>"960",:height=>"380")   %> 
+        </div>
+    <ul class="slidernav">
+    </ul>
+    <div class="sliderdir"> <a href="#"><span class="sliderprev">Prev</span></a> <a href="#"><span class="slidernext">Next</span></a> </div>
+  </div>
+  <!-- End Slider --> 
+  
+  <!-- Begin Wrapper -->
+  <div id="wrapper"> 
+    
+    <!-- Begin Intro -->
+    <div class="intro">
+      <h1>Falcon Bangladesh. One of the largest Garment Accessories company in Bangladesh. </h1>
+    </div>
+    <!-- End Intro --> 
+    
+    <!-- Begin About -->
+    <div id="about">
+      
+
+    <% @products.each do |product| %>
+<div class="one-fourth">
+  <div style="float:right;">
+    <a href="#">
+  <%= image_tag product.photo.url(:small) %></a>
+   <h4> <%= product.title %></h4>
+  <p><%= product.description %></p>
+  </div>  
+</div>
+  <% end %>
+    </div>
+    <!-- End About --> 
+    
+  </div>
+  
+  <!-- End Wrapper -->
+</div> <!-- End Common Wrapper-->
+
+  <div class="clearfix"></div>
+  <div class="push"></div>
+</div>
+
+<!-- Begin Footer -->
+<div id="footer-wrapper">
+  <div id="footer">
+    <div id="footer-content"> 
+      
+      <!-- Begin Copyright -->
+      <div id="copyright">
+        <p>© Copyright 2012 Falcon | E-SolutionPark (SHUVO)</p>
+      </div>
+      <!-- End Copyright --> 
+      
+      <!-- Begin Social Icons -->
+      <div id="socials">
+        <ul>
+          <li><a href="#"><img src="style/images/icon-rss.png" alt="" /></a></li>
+          <li><a href="#"><img src="style/images/icon-twitter.png" alt="" /></a></li>
+          <li><a href="#"><img src="style/images/icon-dribble.png" alt="" /></a></li>
+          <li><a href="#"><img src="style/images/icon-tumblr.png" alt="" /></a></li>
+          <li><a href="#"><img src="style/images/icon-flickr.png" alt="" /></a></li>
+          <li><a href="#"><img src="style/images/icon-facebook.png" alt="" /></a></li>
+        </ul>
+      </div>
+      <!-- End Social Icons --> 
+      
+    </div>
+  </div>
+</div>
+<!-- End Footer -->
+</body>
+</html>

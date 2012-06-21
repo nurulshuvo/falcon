@@ -1,19 +1,42 @@
-<div class="row" style="height: 250px;margin-left:50px;margin-right: 50px;background:  #EEEEEE;border:2px solid;
-border-radius:25px;
--moz-border-radius:25px"></div>
-<div class="clear" style="background: #ffffff"></div></br>
-<div class="row" style="height: 500px;margin-left:50px;margin-right: 50px; background:  #EEEEEE;border:2px solid;
-border-radius:25px;
--moz-border-radius:25px">
+<!-- Begin Slider -->
+  <div id="cycle-wrapper">
+    <div id="sliderholder-cycle"><%=image_tag('slider-1.jpg', :width=>"960",:height=>"380")   %> 
+      <%=image_tag('slider-2.jpg', :width=>"960",:height=>"380")   %> 
+      <%=image_tag('slider-3.jpg', :width=>"960",:height=>"380")   %>
+      <%=image_tag('slider-4.jpg', :width=>"960",:height=>"380")   %> 
+        </div>
+    <ul class="slidernav">
+    </ul>
+    <div class="sliderdir"> <a href="#"><span class="sliderprev">Prev</span></a> <a href="#"><span class="slidernext">Next</span></a> </div>
+  </div>
+  <!-- End Slider --> 
+  
+  <!-- Begin Wrapper -->
+  <div id="wrapper"> 
+    
+    <!-- Begin Intro -->
+    <div class="intro">
+      <h1>Falcon Bangladesh. One of the largest Garment Accessories company in Bangladesh. </h1>
+    </div>
+    <!-- End Intro --> 
+    
+    <!-- Begin About -->
+    <div id="about">
+      
 
-	<% @products.each do |product| %>
-<div class="span3" style="float: left; padding: 10px; margin: 5px; border: 1px solid black;">
-	<%= product.title %>
-	<%= product.description %>
-	<%= product.user_id %>
-	<%= l product.created_at %>
+    <% @products.each do |product| %>
+<div class="one-fourth">
+  <div style="float:right;">
+    <a href="#">
+  <%= image_tag product.photo.url(:small) %></a>
+   <h4> <%= product.title %></h4>
+  <p><%= product.description %></p>
+  </div>  
 </div>
-	<% end %>
-	
-	
-</div>
+  <% end %>
+    </div>
+    <!-- End About --> 
+    
+  </div>
+  
+  <!-- End Wrapper -->

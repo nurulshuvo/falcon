@@ -1,22 +1,24 @@
-<div class="row" style="height: 250px;margin-left:50px;margin-right: 50px;background:  #EEEEEE;border:2px solid;
-border-radius:25px;
--moz-border-radius:25px"></div>
+
+
+
 <div class="clear" style="background: #ffffff"></div></br>
 <div class="row" style="height: 500px;margin-left:50px;margin-right: 50px; background:  #EEEEEE;border:2px solid;
 border-radius:25px;
 -moz-border-radius:25px">
 
 	<% @products.each do |product| %>
-<div class="span3" style="float: left; padding: 10px; margin: 5px; border: 1px solid black;">
+<div  style="float: left; padding: 10px; margin: 5px; border: 1px solid black;">
 	<%= product.title %>
 	<%= product.description %>
 	<%= product.user_id %>
     <%= link_to 'Show', product %>
     <%= link_to 'Edit', edit_product_path(product) %>
     <%= link_to 'Destroy', product, confirm: 'Are you sure?', method: :delete %>
-	<%= l product.created_at %>
+	<%=  product.created_at %>
 </div>
 	<% end %>
 	
-	
+	<div><%=link_to 'Add New product',new_product_path%></div>
 </div>
+
+
