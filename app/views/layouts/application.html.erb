@@ -45,13 +45,13 @@ $(function() {
     <div id="header-wrapper"> 
       <!-- Begin Header -->
       <div id="header">
-        <div id="logo"><a href="index.html"><%=image_tag('logo.png', :alt=>"Falcon")   %></a></div>
+        <div id="logo"><%=image_tag('logo1.png', :alt=>"Falcon")   %></div>
         <!-- Logo --> 
         <!-- Begin Menu -->
         <div id="menu-wrapper">
           <div id="smoothmenu1" class="ddsmoothmenu">
             <ul>
-              <li><a href="index.html" class="selected">Home</a>
+              <li><%=link_to("Home", root_path)%>
               
               </li>
               <li><a href="#">Our Products</a>
@@ -64,21 +64,18 @@ $(function() {
               </li>
               
               
-              <li><a href="page-tabs-toggle.html">Features</a>
+              <li><a href="#">Features</a>
                 <ul>
-                  <li><a href="#">Tabs &amp; Toggle</a></li>
                   <li><a href="#">Carousel</a></li>
                   <li><a href="#">News</a></li>
                   <li><a href="#">Services</a></li>
-                  <li><a href="#">Custom Page</a></li>
                   <li><a href="#">Buttons</a></li>
-                  <li><a href="#">Columns &amp; Tables</a></li>
                 </ul>
               </li>
-              <li><a href="#">About Us</a>
+              <li><%=link_to("About Us", about_us_about_path)%>
                             </li>
 
-              <li><a href="contact.html">Contact Us</a></li>
+              <li><%=link_to("Contact Us", contact_us_contact_path)%></li>
             </ul>
           </div>
         </div>
