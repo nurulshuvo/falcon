@@ -14,6 +14,10 @@
   <%= @product.user_id %>
 </p>
 
+<% @product.photos.each do |photo| %>
+  <p><%= image_tag photo.resource.url %></p>
+<% end %>
+
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),
               products_path, :class => 'btn'  %>

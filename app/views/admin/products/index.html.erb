@@ -1,10 +1,6 @@
 
+	<div><%=link_to 'Add New product',new_product_path%></div>
 
-
-<div class="clear" style="background: #ffffff"></div></br>
-<div class="row" style="height: 500px;margin-left:50px;margin-right: 50px; background:  #EEEEEE;border:2px solid;
-border-radius:25px;
--moz-border-radius:25px">
 
 	<% @products.each do |product| %>
 <div  style="float: left; padding: 10px; margin: 5px; border: 1px solid black;">
@@ -13,12 +9,7 @@ border-radius:25px;
 	<%= product.user_id %>
     <%= link_to 'Show', product %>
     <%= link_to 'Edit', edit_product_path(product) %>
-    <%= link_to 'Destroy', product, confirm: 'Are you sure?', method: :delete %>
+    <%= link_to 'Destroy', [:admin, product], confirm: 'Are you sure?', method: :delete %>
 	<%=  product.created_at %>
 </div>
 	<% end %>
-	
-	<div><%=link_to 'Add New product',new_product_path%></div>
-</div>
-
-

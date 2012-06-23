@@ -1,36 +1,4 @@
-/*
-Theme Name: Delphic
-Author: elemis
-Author URI: http://themeforest.net/user/elemis/portfolio
-Version: 1.0
-Description: HTML Portfolio & Blog
 
-0.	RESET
-1.	FONT-FACE
-2.	GENERAL
-3.	LAYOUT
-4.	MENU
-5.	SLIDERS
-6.	COLUMNS
-7.	HOME INTRO
-8.	HOME ABOUT
-9.	PAGE
-10.	PORTFOLIO
-11.	SINGLE PORTFOLIO
-12.	VERTICAL TAB
-13.	BLOG
-14.	BLOG COMMENTS
-15.	NEWS LIST
-16.	CONTACT
-17.	TOGGLE & TABS
-18.	CAROUSEL
-
------------------------------------------------------------------------------------*/
-
-
-/*-----------------------------------------------------------------------------------*/
-/*	0.	RESET
-/*-----------------------------------------------------------------------------------*/
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
 	margin:0;
@@ -95,11 +63,6 @@ table {
 	display:block
 }
 
-
-/*-----------------------------------------------------------------------------------*/
-/*	1.	FONT-FACE
-/*-----------------------------------------------------------------------------------*/
-
  @font-face {
  font-family: 'Puritan20Italic';
  src: url('style/type/puritan/puritan_italic-webfont.eot?') format('eot'),  url('style/type/puritan/puritan_italic-webfont.woff') format('woff'),  url('style/type/puritan/puritan_italic-webfont.ttf') format('truetype'),  url('style/type/puritan/puritan_italic-webfont.svg#webfontZMWmRIPG') format('svg');
@@ -113,9 +76,6 @@ table {
  font-style: normal;
 }
 
-/*-----------------------------------------------------------------------------------*/
-/*	2.	GENERAL
-/*-----------------------------------------------------------------------------------*/
 
 body {
 	font-family:"Lucida Grande", "Lucida Sans Unicode", "Trebuchet MS", Helvetica, Arial, sans-serif;
@@ -134,11 +94,11 @@ html, body {
 	min-height: 100%;
 	height: auto !important;
 	height: 100%;
-	margin: 0 auto -145px; /* the bottom margin is the negative value of the footer's height */
+	margin: 0 auto -145px;
 }
 
 #footer-wrapper, .push {
-	height: 145px; /* .push must be the same height as .footer */
+	height: 145px;
 }
 
 p {
@@ -465,9 +425,6 @@ table.price td h2 sup {
 	margin-right:20px;
 }
 
-/*-----------------------------------------------------------------------------------*/
-/*	3.	LAYOUT
-/*-----------------------------------------------------------------------------------*/
 
 #wrapper ul {
 	padding: 0 0 20px 0;
@@ -578,9 +535,6 @@ table.price td h2 sup {
 	background: none;
 }
 
-/*-----------------------------------------------------------------------------------*/
-/*	4.	MENU
-/*-----------------------------------------------------------------------------------*/
 
 .ddsmoothmenu {
 	font-family: 'Puritan20Normal';
@@ -596,7 +550,7 @@ table.price td h2 sup {
 	list-style-type: none;
 }
 
-/*Top level list items*/
+
 .ddsmoothmenu ul li {
 	position: relative;
 	display: inline;
@@ -606,15 +560,15 @@ table.price td h2 sup {
 	padding-left: 10px;
 }
 
-/*Top level menu link items style*/
+
 .ddsmoothmenu ul li a {
-	display: block; /*background of menu items (default state)*/
+	display: block;
 	text-decoration: none;
 	position: relative;
 	text-shadow: 0px 1px 0px #efefef;
 }
 
-* html .ddsmoothmenu ul li a { /*IE6 hack to get sub menu links to behave correctly*/
+* html .ddsmoothmenu ul li a {
 	display: inline-block;
 }
 
@@ -622,7 +576,7 @@ table.price td h2 sup {
 	color: #565656;
 }
 
-.ddsmoothmenu ul li a.selected { /*CSS class that's dynamically added to the currently active menu items' LI A element*/
+.ddsmoothmenu ul li a.selected {
 	color: #5d8ba6;
 }
 
@@ -630,19 +584,18 @@ table.price td h2 sup {
 	color: #5d8ba6;
 }
 
-/*1st sub level menu*/
+
 .ddsmoothmenu ul li ul {
 	background: none;
 	font-family: 'Puritan20Normal';
 	position: absolute;
 	padding: 22px 0 0 0;
 	left: 0;
-	display: block; /*collapse all sub menus to begin with*/
+	display: block;
 	visibility: hidden;
 	border-bottom: 1px solid #cdcdcd;
 }
 
-/*Sub level menu list items (undo style from Top level List Items)*/
 .ddsmoothmenu ul li ul li {
 	margin-left:0;
 	padding-left: 0;
@@ -653,7 +606,7 @@ table.price td h2 sup {
 	border-left: 1px solid #cdcdcd;
 }
 
-/*All subsequent sub menu levels vertical offset after 1st level sub menu */
+
 .ddsmoothmenu ul li ul li ul {
 	top: 0;
 	padding-top: 0;
@@ -661,16 +614,16 @@ table.price td h2 sup {
 	border-top: 1px solid #cdcdcd;
 }
 
-/* Sub level menu links style */
+
 .ddsmoothmenu ul li ul li a {
 	font-size: 13px;
-	width: 140px; /*width of sub menus*/
+	width: 140px;
 	padding: 7px 12px;
 	margin: 0;
 	line-height: 1;
 }
 
-/* Sub level menu links style */
+
 .ddsmoothmenu ul li ul li ul li a {
 	font-size: 13px;
 }
@@ -691,16 +644,10 @@ table.price td h2 sup {
 	padding-bottom: 5px;
 }
 
-/* Holly Hack for IE \*/
+
 * html .ddsmoothmenu {
 	height: 1%;
-} /*Holly Hack for IE7 and below*/
-
-/*-----------------------------------------------------------------------------------*/
-/*	5.	SLIDERS
-/*-----------------------------------------------------------------------------------*/
-
-/* CYCLE */
+}
 
 #cycle-wrapper {
 	position: relative;
@@ -775,7 +722,7 @@ table.price td h2 sup {
 	background-position: left bottom;
 }
 
-/* PIECEMAKER */
+
 
 #piecemaker-container {
 	display:block;
@@ -784,10 +731,6 @@ table.price td h2 sup {
 	margin: -10px auto 40px;
 	width: 960px;
 }
-
-/*-----------------------------------------------------------------------------------*/
-/*	6.	COLUMNS
-/*-----------------------------------------------------------------------------------*/
 
 .one-half {
 	width:48%;
@@ -844,10 +787,6 @@ table.price td h2 sup {
 	clear:right;
 }
 
-/*-----------------------------------------------------------------------------------*/
-/*	7.	HOME INTRO
-/*-----------------------------------------------------------------------------------*/
-
 .intro h1 {
 	line-height: 28px;
 	font-size: 22px;
@@ -862,10 +801,6 @@ table.price td h2 sup {
 	margin-bottom:60px;
 }
 
-/*-----------------------------------------------------------------------------------*/
-/*	8.	HOME ABOUT
-/*-----------------------------------------------------------------------------------*/
-
 #about .one-fourth img {
 	-moz-box-shadow: 0px 1px 2px #656565;
 	-webkit-box-shadow: 0px 1px 2px #656565;
@@ -878,9 +813,6 @@ table.price td h2 sup {
 	margin-bottom: 15px;
 }
 
-/*-----------------------------------------------------------------------------------*/
-/*	9.	PAGE
-/*-----------------------------------------------------------------------------------*/
 
 .content {
 	background-color: #FFF;
@@ -904,9 +836,6 @@ table.price td h2 sup {
 	padding: 0;
 }
 
-/*-----------------------------------------------------------------------------------*/
-/*	10.	PORTFOLIO
-/*-----------------------------------------------------------------------------------*/
 
 #portfolio ul li {
 	background: none;
@@ -989,9 +918,6 @@ ul.gallerynav li.selected-1 a {
 	display: none;
 }
 
-/*-----------------------------------------------------------------------------------*/
-/*	11.	SINGLE PORTFOLIO
-/*-----------------------------------------------------------------------------------*/
 
 #portfolio-single .image {
 	width: 660px;
@@ -1042,9 +968,6 @@ a.n-project {
 	color: #5d8ba6;
 }
 
-/*-----------------------------------------------------------------------------------*/
-/*	12.	VERTICAL TAB
-/*-----------------------------------------------------------------------------------*/
 
 ul#tab-menu {
 	float:left;
@@ -1115,9 +1038,6 @@ ul#tab-menu li:last-child {
 	width:100%;
 }
 
-/*-----------------------------------------------------------------------------------*/
-/*	13.	BLOG
-/*-----------------------------------------------------------------------------------*/
 
 #post-wrapper {
 	width: 640px;
@@ -1399,9 +1319,6 @@ ul.ads {
 	margin-bottom: 20px;
 }
 
-/*-----------------------------------------------------------------------------------*/
-/*	14.	BLOG COMMENTS
-/*-----------------------------------------------------------------------------------*/
 
 #comments {
 	margin-top: 10px;
@@ -1645,19 +1562,14 @@ ul.ads {
 	display: none;
 }
 
-/*for FireFox*/
+
     input[type="submit"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner {
  border : 0px;
 }
 
-/*for IE8 */
     input[type="submit"]:focus, input[type="button"]:focus {
 	outline : none;
 }
-
-/*-----------------------------------------------------------------------------------*/
-/*	15.	NEWS LIST
-/*-----------------------------------------------------------------------------------*/
 
 .jcarousel-container {
 	float:left;
@@ -1773,10 +1685,6 @@ a#newslist-next.jbutton:hover {
 	text-decoration: none;
 }
 
-/*-----------------------------------------------------------------------------------*/
-/*	16.	CONTACT
-/*-----------------------------------------------------------------------------------*/
-
 #wrapper ul.info li {
 	background: none;
 	padding: 0 0 0 35px;
@@ -1860,9 +1768,6 @@ a#newslist-next.jbutton:hover {
 	margin: 0 10px 0 0;
 }
 
-/*-----------------------------------------------------------------------------------*/
-/*	17.	TOGGLE & TABS
-/*-----------------------------------------------------------------------------------*/
 
 .toggle {
 	width: 100%;
@@ -1975,10 +1880,6 @@ h2.trigger.active {
 .tab_content {
 	padding: 20px 20px 0 20px;
 }
-
-/*-----------------------------------------------------------------------------------*/
-/*	18.	CAROUSEL
-/*-----------------------------------------------------------------------------------*/
 
 #wrapper .d-carousel ul li {
 	background: none;

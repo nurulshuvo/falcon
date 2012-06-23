@@ -25,8 +25,8 @@
       
 
     <% @products.each do |product| %>
-<div class="one-fourth">
-  <div style="float:right;">
+<div class="one-fourth" style="width: 200px; float: left;">
+  <div >
     <a href="#">
   <%= image_tag product.photo.url(:small) %></a>
    <h4> <%= product.title %></h4>
