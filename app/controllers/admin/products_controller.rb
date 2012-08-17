@@ -46,15 +46,10 @@ class Admin::ProductsController < ApplicationController
    
     @product = Product.new(params[:product])
 
-    respond_to do |format|
+    
 
+    respond_to do |format|
       if @product.save
-      photos = params[:photo]
-      photos.each do |i|
-      @photo = Photo.create(:resource => i)
-      @product.photo_ids = @photo.id
-      @product.save
-    end
         format.html { redirect_to @product, notice: 'Product was successfully created.' }
         format.json { render json: @product, status: :created, location: @product }
       else
