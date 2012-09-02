@@ -22,13 +22,17 @@
     
     <!-- Begin About -->
     <div id="about">
-      
+   
 
-    <% @products.each do |product| %>
+   <% @products.each do |product| %>
 <div class="one-fourth" style="width: 200px; float: left;">
-  <div >
-    <a href="#">
-  <%= image_tag product.photo.url(:small) %></a>
+  
+<ul>
+    <%product.assets.each do |asset|%>
+    <li><%=link_to(image_tag(asset.image.url(:small)),asset.image.url(:original),:target=>:_blank)%></li>
+    <%end%>
+</ul>
+
    <h4> <%= product.title %></h4>
   <p><%= product.description %></p>
   </div>  
