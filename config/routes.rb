@@ -1,4 +1,6 @@
 Falcon::Application.routes.draw do
+  get "our_products/products"
+
   get "contact_us/contact"
 
   get "about_us/about"
